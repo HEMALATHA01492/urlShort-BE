@@ -45,7 +45,7 @@ module.exports.Signup = async (req, res) => {
             Math.random().toString(36).substring(2, 15) +
             Math.random().toString(36).substring(2, 15);
 
-        const link = `https://cheerful-biscochitos-a82552.netlify.app/accountactivation/${randomString}`;
+        const link = `http://localhost:3000/accountactivation/${randomString}`;
 
         const sub = "Account Activation"
 
@@ -133,7 +133,7 @@ module.exports.PasswordResetLink = async (req, res) => {
         await User.findByIdAndUpdate(matchedUser.id, matchedUser);
 
         //sending email for resetting
-        const link = `https://cheerful-biscochitos-a82552.netlify.app/PasswordReset/${randomString}`;
+        const link = `http://localhost:3000/PasswordReset/${randomString}`;
 
         const sub = "Reset password"
 
