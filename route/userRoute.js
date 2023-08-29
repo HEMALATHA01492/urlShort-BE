@@ -2,7 +2,8 @@ const {getUser,getUserRestrictData,Signup,AccountActivation,Signin,
     PasswordResetLink,PasswordUpdate}=require('../Controller/userController');
 
 const {UrlAdd,Click,GetuserData,Redirect}=require('../Controller/urlController');
-const authMiddleware=require('../middleware/authMiddleware')
+
+const authMiddleware=require('../middleware/authMiddleware');
 
 const router=require('express').Router();
 
